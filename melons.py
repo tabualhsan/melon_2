@@ -78,7 +78,11 @@ class GovernmentMelonOrder(AbstractMelonOrder):
 
     def marked_inspection(self, passed):    
         if passed:
+            self.passed_inspection = True 
+            print("It has passed inspection!")
     
+        return self.passed_inspection
 
 
 christmas_melons = InternationalMelonOrder("Christmas Melon", 10, "AUS")
+watermelon = GovernmentMelonOrder()
